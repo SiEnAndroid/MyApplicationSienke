@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/loading_shape"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/text_black"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:id="@+id/frame_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/frame_animation_list"/>
+
+            <TextView
+                android:id="@+id/tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="正在查询，请稍后..."
+                android:textSize="12sp"
+                android:textColor="@color/text_blue" />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:background="@color/gray_little_thin"
+            android:layout_height="0.5dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/ensure"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:button="@null"
+            android:background="@drawable/popupwindow_no_task"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="14sp"
+            android:textColor="@color/text_blue"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

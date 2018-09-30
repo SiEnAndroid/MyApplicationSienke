@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@mipmap/title_bar_bg">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/back_selector"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="公共信息"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/business_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/gray_thin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/public_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/public_info_radio_bg"
+                android:button="@null"
+                android:drawablePadding="6dp"
+                android:drawableLeft="@drawable/business_i_selector"
+                android:drawableStart="@drawable/business_i_selector"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="公共信息"
+                android:textColor="@drawable/business_text_selector"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <RadioButton
+                android:id="@+id/net"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/public_info_radio_bg"
+                android:button="@null"
+                android:drawableLeft="@drawable/business_a_selector"
+                android:drawableStart="@drawable/business_a_selector"
+                android:gravity="center"
+                android:drawablePadding="6dp"
+                android:padding="7dp"
+                android:text="网络通讯"
+                android:textColor="@drawable/business_text_selector"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <RadioButton
+                android:id="@+id/person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/public_info_radio_bg"
+                android:button="@null"
+                android:drawableLeft="@drawable/business_person_selector"
+                android:drawableStart="@drawable/business_person_selector"
+                android:gravity="center"
+                android:padding="7dp"
+                android:drawablePadding="6dp"
+                android:text="个人办公"
+                android:textColor="@drawable/business_text_selector"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </RadioGroup>
+
+    <!--<RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/gray_thin">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/public_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/public_info_radio_bg"
+                android:padding="7dp"
+                android:text="公共信息"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:drawableLeft="@drawable/business_i_selector"
+                android:drawableStart="@drawable/business_i_selector"
+                android:textColor="@drawable/business_text_selector"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <RadioButton
+            android:id="@+id/public_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:button="@null"
+            android:background="@drawable/public_info_radio_bg"
+            android:padding="7dp"
+            android:text="公共信息"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:drawableLeft="@drawable/business_i_selector"
+            android:drawableStart="@drawable/business_i_selector"
+            android:textColor="@drawable/business_text_selector"
+            android:textSize="16sp" />
+        <RadioButton
+            android:id="@+id/net"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:button="@null"
+            android:text="网络通讯"
+            android:padding="7dp"
+            android:background="@drawable/public_info_radio_bg"
+            android:drawableLeft="@drawable/business_a_selector"
+            android:textColor="@drawable/business_text_selector"
+            android:textSize="16sp"/>
+        <RadioButton
+            android:id="@+id/person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:button="@null"
+            android:text="个人办公"
+            android:padding="7dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/public_info_radio_bg"
+            android:drawableLeft="@drawable/business_person_selector"
+            android:textColor="@drawable/business_text_selector"
+            android:textSize="16sp"/>
+
+    </RadioGroup>-->
+
+
+</LinearLayout>

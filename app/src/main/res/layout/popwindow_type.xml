@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white_transparent">
+    <RadioGroup
+        android:layout_width="110dp"
+        android:layout_height="105dp"
+        android:orientation="vertical"
+        android:background="@mipmap/window_bg"
+        android:paddingTop="4dp">
+
+        <RadioButton
+            android:id="@+id/rd_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:background="@drawable/meter_settings_layout_selector"
+            android:gravity="center"
+            android:text="全部"
+
+            android:textColor="@drawable/select_blue_color"
+            android:textSize="12sp"
+            android:button="@null"
+            android:padding="8dp"/>
+        <View
+            android:layout_width="110dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+        <RadioButton
+            android:id="@+id/rd_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:background="@drawable/meter_settings_layout_selector"
+            android:gravity="center"
+            android:text="已办理"
+            android:textColor="@drawable/select_blue_color"
+            android:textSize="12sp"
+            android:button="@null"
+            android:padding="8dp"/>
+        <View
+            android:layout_width="110dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+        <RadioButton
+            android:id="@+id/rd_not"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:background="@drawable/meter_settings_layout_selector"
+            android:gravity="center"
+            android:checked="true"
+            android:text="未办理"
+            android:textSize="12sp"
+            android:textColor="@drawable/select_blue_color"
+            android:button="@null"
+            android:padding="8dp"/>
+        <View
+            android:layout_width="110dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+    </RadioGroup>
+</LinearLayout>

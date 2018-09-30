@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_transparent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:background="@mipmap/window_bg"
+        android:orientation="vertical"
+        android:paddingTop="4dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/settings"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/meter_settings_first_one_selector"
+                android:button="@null"
+                android:drawableLeft="@mipmap/settings"
+                android:gravity="center"
+                android:padding="8dp"
+                android:drawableStart="@mipmap/settings"
+                android:text="系统设置"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_thin"/>
+
+            <RadioButton
+                android:id="@+id/quite"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/more_settings_last_one_selector"
+                android:button="@null"
+                android:drawableLeft="@mipmap/exit"
+                android:gravity="center"
+                android:padding="8dp"
+                android:drawableStart="@mipmap/exit"
+                android:text="退出登录"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_thin"/>
+
+            <RadioButton
+                android:id="@+id/version_info"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/more_settings_last_one_selector"
+                android:button="@null"
+                android:drawableLeft="@mipmap/business_i_2"
+                android:gravity="center"
+                android:padding="8dp"
+                android:drawableStart="@mipmap/business_i_2"
+                android:text="版本信息"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_thin"/>
+
+            <RadioButton
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/more_settings_last_one_selector"
+                android:button="@null"
+                android:drawableLeft="@mipmap/exit"
+                android:gravity="center"
+                android:padding="8dp"
+                android:drawableStart="@mipmap/exit"
+                android:text="问题反馈"
+                android:visibility="gone"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"/>
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

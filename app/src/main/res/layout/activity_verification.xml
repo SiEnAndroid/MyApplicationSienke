@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/vitification"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="识别码:"
+                android:textColor="#99FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vertification_UUID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textColor="#99FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/vertification_Frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:id="@+id/vertification_Code"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@mipmap/login_tfcode_white"
+                android:gravity="left|center_vertical"
+                android:hint="请输入注册码"
+                android:maxLines="2"
+                android:paddingLeft="35dp"
+                android:textColor="@android:color/background_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vertification_Code_sure"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/vertify_btn_shape_no"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:text="确定"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vertification_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="设置IP和Port"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/vertification_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/vertification_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@mipmap/editbox_background_normal"
+                    android:digits="1234567890."
+                    android:hint="输入IP"
+                    android:minHeight="40dp"
+                    android:padding="5dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/vertification_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/editbox_background_normal"
+                    android:digits="1234567890."
+                    android:hint="输入Port"
+                    android:minHeight="40dp"
+                    android:padding="5dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/vertification_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/selector_btn"
+                            android:text="取消" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/vertification_sure"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="4dp"
+                            android:background="@drawable/selector_btn"
+                            android:text="确定" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

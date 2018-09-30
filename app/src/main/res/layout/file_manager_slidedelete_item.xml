@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.administrator.thinker_soft.mode.MySlideDelete
+        android:id="@+id/slide_delete"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <!--内容部分-->
+        <include layout="@layout/activity_file_manager_listview_item" />
+
+        <!--删除部分-->
+        <include layout="@layout/activity_delete_item" />
+    </com.example.administrator.thinker_soft.mode.MySlideDelete>
+
+</RelativeLayout>

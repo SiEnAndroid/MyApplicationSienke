@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:scrollbars="none">
+        <RadioGroup
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <RadioButton
+                android:id="@+id/indoor_stand_pipe"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/button_white_bg_take_photo_selector"
+                android:text="户内立管内"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@drawable/radiogroup_text_selector"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_thin" />
+
+            <RadioButton
+                android:id="@+id/indoor_branch_pipe"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/button_white_bg_album_selector"
+                android:text="户内支管系统"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@drawable/radiogroup_text_selector"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_thin" />
+
+            <RadioButton
+                android:id="@+id/fuel_gas_meter"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/button_white_bg_album_selector"
+                android:text="燃气表类"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@drawable/radiogroup_text_selector"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_thin" />
+
+            <RadioButton
+                android:id="@+id/burning_appliances"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/button_white_bg_album_selector"
+                android:text="燃烧器具类"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@drawable/radiogroup_text_selector"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_thin" />
+
+            <RadioButton
+                android:id="@+id/gas_facilities_room"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/button_white_bg_album_selector"
+                android:text="用气设施房间类"
+                android:button="@null"
+                android:textColor="@drawable/radiogroup_text_selector"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_thin" />
+
+            <RadioButton
+                android:id="@+id/three_way_pipe"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/button_white_bg_album_selector"
+                android:text="三通管道类"
+                android:button="@null"
+                android:textColor="@drawable/radiogroup_text_selector"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </ScrollView>
+
+</LinearLayout>
+

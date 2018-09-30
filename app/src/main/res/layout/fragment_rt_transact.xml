@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bottom_round"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="下一节点："
+            android:textColor="@color/text_gray" />
+        <TextView
+            android:id="@+id/tv_node"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/text_black"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="流转条件："
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/text_gray" />
+
+        <LinearLayout
+            android:id="@+id/layout_ct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/check_hidden_danger_down_shape"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_condition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:lines="1"
+                android:textSize="15sp"
+                android:textColor="@color/text_black"
+                android:padding="5dp"
+                android:singleLine="true"
+                />
+
+            <ImageView
+                android:id="@+id/image_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:paddingRight="8dp"
+                android:src="@mipmap/down_arrows" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="回  退  点："
+            android:textColor="@color/text_gray" />
+
+        <LinearLayout
+            android:id="@+id/layout_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/check_hidden_danger_down_shape"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_regresses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:background="@null"
+                android:lines="1"
+                android:textColor="@color/text_black"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/image_regresses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:paddingRight="8dp"
+                android:src="@mipmap/down_arrows" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="办  理  人："
+            android:textColor="@color/text_gray" />
+
+        <LinearLayout
+            android:id="@+id/layout_rs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/check_hidden_danger_down_shape"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_transact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_black"
+                android:background="@null"
+                android:lines="1"
+                android:padding="5dp"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/image_transact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:paddingRight="8dp"
+                android:src="@mipmap/down_arrows" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="办理批示："
+            android:textColor="@color/text_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/check_hidden_danger_down_shape"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_approval"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="2"
+                android:background="@null"
+                android:maxLines="2"
+                android:maxLength="30"
+                android:hint="30个字以内"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:textColor="@color/text_black"
+                android:scrollbars="vertical"
+                android:singleLine="false" />
+
+            <ImageView
+                android:id="@+id/iv_instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:paddingRight="8dp"
+                android:src="@mipmap/down_arrows" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_roam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/radio_rt_selector"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="流转"
+                android:textColor="@drawable/radio_rt_text_selector"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_rebut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_rt_selector"
+                android:background="@android:color/transparent"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="驳回"
+                android:textColor="@drawable/radio_rt_text_selector"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_rt_selector"
+                android:background="@android:color/transparent"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="注销"
+                android:textColor="@drawable/radio_rt_text_selector"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/select_btn_blue"
+        android:text="保存" />
+
+</LinearLayout>

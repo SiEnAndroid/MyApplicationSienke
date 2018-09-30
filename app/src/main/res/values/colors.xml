@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="theme_colors">#5da9fd</color>
+    <color name="title_colors">#585cfe</color>
+    <color name="green">#00e367</color>
+    <color name="red">#FF0000</color>
+    <color name="red01">#cf3131</color>
+    <color name="blue">#107BB7</color>
+    <color name="blue_thin">#75ABD1</color>
+    <color name="gray">#808080</color>
+    <color name="gray_thin">#efeff4</color>
+    <color name="gray_little_thin">#BBBBBB</color>
+    <color name="text_gray">#7d7d7d</color>
+    <color name="meter_bg">#F9F9F9</color>
+    <color name="text_black">#2b2b2b</color>
+    <color name="text_blue">#0088ff</color>
+    <color name="blue03">#FF2296EA</color>
+    <color name="simple_blue">#A7C0DC</color>
+    <color name="transparent">#10ffffff</color>
+    <color name="white_transparent">#00ffffff</color>
+    <color name="transparent_blue">#804EA0DC</color>
+    <color name="transparent_gray">#90000000</color>
+    <color name="transparent_blue_a">#900088ff</color>
+    <color name="btn_color_xz">#80C8FE</color>
+    <color name="dialog_bg">#FFFFFF</color>
+    <color name="text_color_blue">#0088ff</color>
+    <color name="base_text_color">#000000</color>
+    <color name="bblue">#0570fa</color>
+    <color name="text_color">#000000</color>
+    <color name="msg_color">#000000</color>
+    <color name="mission_tv_blue">#2291fa</color>
+    <color name="mission_tv_grey">#95000000</color>
+    <color name="daohang_color">#2291fa</color>
+    <color name="text_font_color_white">#FFFFFF</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="onceagain">#00000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent_thin_black">#80000000</color>
+    <color name="transparent_thick_black">#90000000</color>
+
+    <color name="main_bg">#2C3941</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green01">#4aa44a</color>
+    <!-- 二维码相关 -->
+
+    <color name="province_line_border">#D0D0D0</color>
+    <color name="bocop_dialog_bg">#77000000</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_e84515">#e84515</color>
+    <color name="color_d8d8d8">#d8d8d8</color>
+    <color name="color_323232">#323232</color>
+    <color name="view_line">#DFDFDF</color>
+    <color name="color_F4F0E5">#F4F0E5</color>
+    <color name="color_296BD8">#296BD8</color>
+    <color name="color_FDFDFE">#FDFDFE</color>
+    <color name="color_86d39a">#86d39a</color>
+    <color name="color_009646">#009646</color>
+    <color name="color_FCFBF7">#FCFBF7</color>
+    
+</resources>

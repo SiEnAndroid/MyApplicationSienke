@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white_transparent">
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:background="@mipmap/window_bg"
+        android:paddingTop="4dp">
+        <TextView
+            android:id="@+id/map_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tesseract_ocr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_picture"
+            android:drawableStart="@mipmap/icon_picture"
+            android:drawablePadding="8dp"
+            android:background="@drawable/meter_settings_first_one_selector"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="图像识别"
+            android:textColor="@color/text_black"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+        <View
+            android:layout_width="110dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+
+        <TextView
+            android:id="@+id/map_meter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/map_meter_icon"
+            android:drawableStart="@mipmap/map_meter_icon"
+            android:drawablePadding="8dp"
+            android:background="@drawable/meter_settings_layout_selector"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="地图抄表"
+            android:textColor="@color/text_black"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="110dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+
+        <TextView
+            android:id="@+id/coordinate_manage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/map_manager"
+            android:drawableStart="@mipmap/map_manager"
+            android:drawablePadding="8dp"
+            android:background="@drawable/meter_settings_layout_selector"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="坐标管理"
+            android:textColor="@color/text_black"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+
+        <View
+            android:layout_width="110dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+
+
+        <TextView
+            android:id="@+id/scan_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/scan_code"
+            android:drawableStart="@mipmap/scan_code"
+            android:drawablePadding="8dp"
+            android:background="@drawable/meter_settings_layout_selector"
+            android:gravity="center"
+            android:text="扫码抄表"
+            android:textColor="@color/text_black"
+            android:textSize="12sp"
+            android:padding="8dp"/>
+        <View
+            android:layout_width="110dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+
+        <TextView
+            android:id="@+id/system_exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/meter_exit"
+            android:drawablePadding="8dp"
+            android:background="@drawable/more_settings_last_one_selector"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="退出登录"
+            android:textColor="@color/text_black"
+            android:textSize="12sp"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="110dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+
+        <TextView
+            android:id="@+id/system_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/system_settings"
+            android:drawablePadding="8dp"
+            android:background="@drawable/more_settings_last_one_selector"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="系统设置"
+            android:textColor="@color/text_black"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

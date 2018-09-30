@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root_linearlayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@mipmap/title_bar_bg">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/back_selector"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="坐标获取"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="导航"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@drawable/normal_text_pressed_selector"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map_meter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white_transparent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/open_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/normal_button_bg_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_drawable_selector"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_drawable_selector"
+                android:padding="7dp"
+                android:text="开启个性化地图"
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/close_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/normal_button_bg_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_drawable_selector"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/radio_drawable_selector"
+                android:padding="7dp"
+                android:text="关闭个性化地图"
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="14sp"/>
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/white_transparent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/normal_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/normal_button_bg_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_drawable_selector"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/radio_drawable_selector"
+                android:padding="7dp"
+                android:text="普通地图"
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/satellite_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/normal_button_bg_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_drawable_selector"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/radio_drawable_selector"
+                android:padding="7dp"
+                android:text="卫星地图"
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/normal_button_bg_selector"
+                android:orientation="horizontal"
+                android:padding="7dp">
+
+                <CheckBox
+                    android:id="@+id/traffic_type"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/check_box_selector1"
+                    android:button="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="路况地图"
+                    android:textColor="@drawable/radio_text_selector"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/normal_button_bg_selector"
+                android:orientation="horizontal"
+                android:padding="7dp">
+
+                <CheckBox
+                    android:id="@+id/heat_type"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/check_box_selector1"
+                    android:button="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热力地图"
+                    android:textColor="@drawable/radio_text_selector"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+        </RadioGroup>
+
+
+        <!--<TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/location"
+            android:background="@drawable/normal_button_bg_selector"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/text_blue"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="50dp"/>-->
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/normal_button_bg_selector"
+            android:padding="6dp"
+            android:src="@mipmap/location"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

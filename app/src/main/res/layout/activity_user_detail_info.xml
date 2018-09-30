@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/root_relative"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@mipmap/title_bar_bg">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/back_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="安检详细信息"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:textSize="16sp"
+            android:text="编辑"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarSize="2dp"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbarThumbVertical="@color/text_blue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_thin"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_little_thin" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:contentPadding="10dp"
+                tools:targetApi="lollipop">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/image_h"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/user_head"/>
+
+                        <EditText
+                            android:id="@+id/user_name"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_toRightOf="@+id/image_h"
+                            android:text="张三"
+                            android:textColor="@color/text_black"
+                            android:textSize="20sp" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="用户编号："
+                                    android:textColor="@color/text_black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_userid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="007"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="安检类型："
+                                    android:textColor="@color/text_black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_security_type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="001"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="表编号："
+                                    android:textColor="@color/text_black"
+                                    android:textSize="14sp" />
+
+                                <EditText
+                                    android:id="@+id/meter_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:digits="0123456789abcdefghijgklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                    android:hint="编辑"
+                                    android:inputType="textVisiblePassword"
+                                    android:maxLength="40"
+                                    android:paddingBottom="3dp"
+                                    android:paddingTop="3dp"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="用户电话："
+                                    android:textColor="@color/text_black"
+                                    android:textSize="14sp" />
+
+                                <EditText
+                                    android:id="@+id/user_phone_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:hint="编辑"
+                                    android:maxLength="40"
+                                    android:paddingBottom="3dp"
+                                    android:paddingTop="3dp"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="用户地址："
+                                android:textColor="@color/text_black"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/user_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="编辑"
+                                android:paddingBottom="3dp"
+                                android:paddingTop="3dp"
+                                android:textColor="@color/text_gray"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gray_little_thin" />
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:padding="10dp">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_marginEnd="10dp"
+                     android:layout_marginRight="10dp"
+                     android:drawableLeft="@mipmap/user_number"
+                     android:drawablePadding="10dp"
+                     android:gravity="center_vertical"
+                     android:text="@string/user_number"
+                     android:textColor="@color/text_black"
+                     android:textSize="14sp"/>
+
+                 <android.support.v7.widget.CardView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight="1"
+                     android:foreground="?android:attr/selectableItemBackground"
+                     app:cardBackgroundColor="@android:color/white"
+                     app:cardCornerRadius="5dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="3dp">
+
+                     <TextView
+                         android:id="@+id/user_new_id"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="end"
+                         android:text=""
+                         android:paddingTop="3dp"
+                         android:paddingBottom="3dp"
+                         android:textColor="@color/text_gray"
+                         android:textSize="12sp"/>
+                 </android.support.v7.widget.CardView>
+
+             </LinearLayout>
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginLeft="16dp"
+                 android:layout_marginRight="16dp"
+                 android:background="@color/gray_thin"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:padding="10dp">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_marginEnd="10dp"
+                     android:layout_marginRight="10dp"
+                     android:drawableLeft="@mipmap/user_name"
+                     android:drawablePadding="10dp"
+                     android:gravity="center_vertical"
+                     android:text="用户名称"
+                     android:textColor="@color/text_black"
+                     android:textSize="14sp"/>
+
+                 <android.support.v7.widget.CardView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight="1"
+                     android:foreground="?android:attr/selectableItemBackground"
+                     app:cardBackgroundColor="@android:color/white"
+                     app:cardCornerRadius="5dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="3dp">
+
+                     <TextView
+                         android:id="@+id/user_name"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="end"
+                         android:paddingTop="3dp"
+                         android:paddingBottom="3dp"
+                         android:text=""
+                         android:textColor="@color/text_gray"
+                         android:textSize="12sp"/>
+                 </android.support.v7.widget.CardView>
+
+             </LinearLayout>
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginLeft="16dp"
+                 android:layout_marginRight="16dp"
+                 android:background="@color/gray_thin"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:padding="10dp">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_marginEnd="10dp"
+                     android:layout_marginRight="10dp"
+                     android:drawableLeft="@mipmap/meter_number_icon"
+                     android:drawablePadding="10dp"
+                     android:gravity="center_vertical"
+                     android:text="@string/meter_number"
+                     android:textColor="@color/text_black"
+                     android:textSize="14sp"/>
+
+                 <android.support.v7.widget.CardView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight="1"
+                     android:foreground="?android:attr/selectableItemBackground"
+                     app:cardBackgroundColor="@android:color/white"
+                     app:cardCornerRadius="5dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="3dp">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:gravity="end"
+                         android:orientation="horizontal">
+
+                         <EditText
+                             android:id="@+id/meter_number"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:background="@null"
+                             android:digits="0123456789abcdefghijgklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                             android:gravity="end"
+                             android:paddingTop="3dp"
+                             android:paddingBottom="3dp"
+                             android:hint="添加"
+                             android:inputType="textVisiblePassword"
+                             android:maxLength="40"
+                             android:textColor="@color/text_gray"
+                             android:textSize="12sp"/>
+                     </LinearLayout>
+                 </android.support.v7.widget.CardView>
+
+             </LinearLayout>
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginLeft="16dp"
+                 android:layout_marginRight="16dp"
+                 android:background="@color/gray_thin"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:padding="10dp">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginEnd="10dp"
+                     android:layout_marginRight="10dp"
+                     android:drawableLeft="@mipmap/user_phonenumber"
+                     android:drawablePadding="10dp"
+                     android:gravity="center_vertical"
+                     android:text="@string/user_phone_number"
+                     android:textColor="@color/text_black"
+                     android:textSize="14sp"/>
+
+                 <android.support.v7.widget.CardView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight="1"
+                     android:foreground="?android:attr/selectableItemBackground"
+                     app:cardBackgroundColor="@android:color/white"
+                     app:cardCornerRadius="5dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="3dp">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:gravity="end"
+                         android:orientation="horizontal">
+
+                         <EditText
+                             android:id="@+id/user_phone_number"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@null"
+                             android:paddingTop="3dp"
+                             android:paddingBottom="3dp"
+                             android:gravity="end"
+                             android:hint="添加"
+                             android:maxLength="40"
+                             android:textColor="@color/text_gray"
+                             android:textSize="12sp"/>
+                     </LinearLayout>
+                 </android.support.v7.widget.CardView>
+
+             </LinearLayout>
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginLeft="16dp"
+                 android:layout_marginRight="16dp"
+                 android:background="@color/gray_thin"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:padding="10dp">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginEnd="10dp"
+                     android:layout_marginRight="10dp"
+                     android:drawableLeft="@mipmap/user_address"
+                     android:drawablePadding="10dp"
+                     android:gravity="center_vertical"
+                     android:text="@string/user_address"
+                     android:textColor="@color/text_black"
+                     android:textSize="14sp"/>
+
+                 <ScrollView
+                     android:id="@+id/inner_scrollview"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:layout_weight="1"
+                     android:fillViewport="true"
+                     android:scrollbarSize="2dp"
+                     android:scrollbarStyle="insideInset"
+                     android:scrollbarThumbVertical="@color/text_blue">
+
+                     <android.support.v7.widget.CardView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_margin="5dp"
+                         android:foreground="?android:attr/selectableItemBackground"
+                         app:cardBackgroundColor="@android:color/white"
+                         app:cardCornerRadius="5dp"
+                         app:cardElevation="0dp"
+                         app:contentPadding="3dp">
+
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:gravity="end"
+                             android:orientation="horizontal">
+
+                             <EditText
+                                 android:id="@+id/user_address"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:background="@null"
+                                 android:paddingTop="3dp"
+                                 android:paddingBottom="3dp"
+                                 android:gravity="top|end"
+                                 android:hint="添加"
+                                 android:textColor="@color/text_gray"
+                                 android:textSize="12sp"/>
+                         </LinearLayout>
+                     </android.support.v7.widget.CardView>
+                 </ScrollView>
+
+             </LinearLayout>
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginLeft="16dp"
+                 android:layout_marginRight="16dp"
+                 android:background="@color/gray_thin"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:padding="10dp">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_marginEnd="10dp"
+                     android:layout_marginRight="10dp"
+                     android:drawableLeft="@mipmap/check_type"
+                     android:drawablePadding="10dp"
+                     android:drawableStart="@mipmap/check_type"
+                     android:gravity="center_vertical"
+                     android:text="@string/check_type"
+                     android:textColor="@color/text_black"
+                     android:textSize="14sp"/>
+
+                 <android.support.v7.widget.CardView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight="1"
+                     android:foreground="?android:attr/selectableItemBackground"
+                     app:cardBackgroundColor="@android:color/white"
+                     app:cardCornerRadius="5dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="3dp">
+
+                     <TextView
+                         android:id="@+id/check_type"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="end"
+                         android:text=""
+                         android:paddingTop="3dp"
+                         android:paddingBottom="3dp"
+                         android:textColor="@color/text_gray"
+                         android:textSize="14sp"/>
+                 </android.support.v7.widget.CardView>
+
+             </LinearLayout>
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginLeft="16dp"
+                 android:layout_marginRight="16dp"
+                 android:background="@color/gray_thin"/>-->
+
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@mipmap/check_time"
+                    android:drawablePadding="20dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/check_time"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/check_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:text="安检情况："
+                        android:textColor="@color/text_black"
+                        android:textSize="14sp" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/case_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="1dp"
+                        app:contentPadding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/security_check_case"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="点击选择"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:src="@drawable/down_more_selector" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="表编号："
+                        android:textColor="@color/text_black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/new_meter_numb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/linearlayout_shape"
+                        android:hint="请输入表编号(选填)"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="6dp"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hidden_type_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/security_hidden_type"
+                        android:textColor="@color/text_black"
+                        android:textSize="14sp" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/type_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="1dp"
+                        app:contentPadding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/security_hidden_type"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="点击选择"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:src="@drawable/down_more_selector" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hidden_reason_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/security_hidden_reason"
+                        android:textColor="@color/text_black"
+                        android:textSize="14sp" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/reason_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="1dp"
+                        app:contentPadding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/security_hidden_reason"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="点击选择"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:src="@drawable/down_more_selector" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/remarks_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remarks"
+                        android:textColor="@color/text_black"
+                        android:textSize="14sp" />
+
+                    <!--<EditText
+                        android:id="@+id/remarks"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/linearlayout_shape"
+                        android:hint="备注信息(选填)"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12sp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"/>-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/remarks_rb1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableLeft="@drawable/radio_drawable_selector"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:padding="8dp"
+                                android:text="需要复检"
+                                android:textColor="@drawable/radio_text_selector"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/remarks_rb2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableLeft="@drawable/radio_drawable_selector"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:padding="8dp"
+                                android:text="现场已整改"
+                                android:textColor="@drawable/radio_text_selector"
+                                android:textSize="12sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="照        片："
+                        android:textColor="@color/text_black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="(最多可拍9张图片)"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/check_hidden_danger_down_shape"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.example.administrator.thinker_soft.mode.MyGridview
+                        android:id="@+id/gridview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:numColumns="5"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="5dp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/save_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/theme_colors"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="5dp"
+                    app:contentPadding="10dp">
+
+                    <TextView
+                        android:id="@+id/save_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="保 存"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

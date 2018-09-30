@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- fragmet信息列表部分 -->
+
+    <RelativeLayout
+        android:id="@+id/gps_page_show_control"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:id="@+id/gps_valve_listview_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gps_valve_listview_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@mipmap/net_request_bg" />
+
+            <TextView
+                android:id="@+id/gps_valve_listview_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="想看设备数据吗？\n    那就点我吧!"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gps_valve_listview_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/loading_wait"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.example.administrator.thinker_soft.myfirstpro.refreshListView.RefreshPullToRefreshListView
+            android:id="@+id/gps_valve_fragment_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="#eeeeeeee"
+            android:dividerHeight="4dp"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:transcriptMode="disabled"
+            android:visibility="visible">
+
+        </com.example.administrator.thinker_soft.myfirstpro.refreshListView.RefreshPullToRefreshListView>
+
+        <ScrollView
+            android:id="@+id/gps_valve_ll"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@mipmap/valve_top_bg" />
+
+                    <ImageView
+                        android:id="@+id/gps_page_show_bg_control"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/valve_top_bz" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#999999" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/gps_valve_devName"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="名    称"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/gps_valve_devName_updown"
+                                android:layout_width="20dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@mipmap/valve_middle_btn_up_bg"
+                                android:gravity="center" />
+                        </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/gps_valve_devName_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/edit_bg_selector"
+                            android:focusable="true"
+                            android:gravity="left|top"
+                            android:hint="请输入名称"
+                            android:lines="6"
+                            android:paddingLeft="2dp"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#999999" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/gps_valve_devAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="地    址"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/gps_valve_devAddress_updown"
+                                android:layout_width="20dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@mipmap/valve_middle_btn_up_bg"
+                                android:gravity="center" />
+                        </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/gps_valve_devAddress_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/edit_bg_selector"
+                            android:focusable="true"
+                            android:gravity="left|top"
+                            android:hint="请输入地址！"
+                            android:lines="6"
+                            android:paddingLeft="2dp"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#999999" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/gps_valve_devRemark"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="备    注"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/gps_valve_devRemark_updown"
+                                android:layout_width="20dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@mipmap/valve_middle_btn_up_bg"
+                                android:gravity="center" />
+                        </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/gps_valve_devRemark_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/edit_bg_selector"
+                            android:focusable="true"
+                            android:gravity="left|top"
+                            android:hint="请输入备注！"
+                            android:lines="6"
+                            android:paddingLeft="2dp"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#999999" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/gps_valve_devType"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="类    型"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/gps_valve_devType_updown"
+                                android:layout_width="20dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@mipmap/valve_middle_btn_up_bg"
+                                android:gravity="center" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/gps_valve_wheelview_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/gps_valve_wheelview_image"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@mipmap/net_request_bg" />
+
+                            <TextView
+                                android:id="@+id/gps_valve_wheelview_word"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="若要获取设备类型\n    请点击我吧!"
+                                android:textColor="#666666"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/gps_valve_wheelview_progress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/loading_wait" />
+                        </LinearLayout>
+
+                        <com.example.administrator.thinker_soft.myfirstpro.wheel.WheelView
+                            android:id="@+id/gps_valve_wheelview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:visibility="gone">
+
+                        </com.example.administrator.thinker_soft.myfirstpro.wheel.WheelView>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#999999" />
+
+                    <TextView
+                        android:id="@+id/gps_valve_btn_Done"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:background="@mipmap/main_statebg"
+                        android:gravity="center"
+                        android:text="确认添加"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

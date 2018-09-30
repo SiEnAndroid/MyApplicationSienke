@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/include_bar"/>
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/ns_view"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:background="@mipmap/ic_report_bg"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:background="@drawable/shape_top_round"
+            android:id="@+id/rb_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="业务信息"
+            android:button="@null"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:checked="true"
+            android:drawableRight="@drawable/select_right_down">
+
+        </RadioButton>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+        <FrameLayout
+            android:id="@+id/frame_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+         >
+        </FrameLayout>
+
+        <RadioButton
+            android:id="@+id/rb_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:button="@null"
+            android:textSize="18sp"
+            android:background="@color/color_F4F0E5"
+            android:text="办理情况"
+            android:drawableRight="@drawable/select_right_down">
+
+        </RadioButton>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+        <FrameLayout
+            android:id="@+id/frame_condition"
+            android:background="@color/color_F4F0E5"
+            android:layout_width="match_parent"
+            android:paddingLeft="12dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="12dp"
+        >
+
+        </FrameLayout>
+
+        <RadioButton
+            android:id="@+id/rb_enclosure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="业务附件"
+            android:button="@null"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:paddingRight="12dp"
+            android:background="@color/color_F4F0E5"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:drawableRight="@drawable/select_right_down">
+
+        </RadioButton>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:background="@color/color_FDFDFE"/>
+        <FrameLayout
+            android:id="@+id/frame_enclosure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+>
+        </FrameLayout>
+
+        <RadioButton
+            android:id="@+id/rb_transact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="业务办理"
+            android:layout_marginTop="10dp"
+            android:button="@null"
+            android:paddingLeft="12dp"
+            android:textSize="18sp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:background="@color/color_F4F0E5"
+            android:drawableRight="@drawable/select_right_down">
+
+        </RadioButton>
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_thin" />
+        <FrameLayout
+            android:id="@+id/frame_transact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+       >
+        </FrameLayout>
+
+    </RadioGroup>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

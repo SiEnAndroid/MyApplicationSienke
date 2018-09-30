@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/meter_db_lv_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/xz_list_selector"
+        android:gravity="center_vertical"
+        android:minHeight="60dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/meter_db_lv_iv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/delete_file_item_head" />
+
+        <TextView
+            android:id="@+id/meter_db_lv_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="5"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:lines="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="目标"
+            android:textColor="@color/base_text_color"
+            android:textSize="18dip" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="@color/white_transparent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/business_check_shape">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择安全情况"
+            android:textColor="@color/text_black"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray_thin"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/recyclerView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+              android:layout_marginBottom="50dp"
+
+               android:scrollbarThumbVertical="@color/text_blue"
+               android:scrollbarStyle="insideOverlay"
+               android:scrollbarSize="2dp">
+
+           </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/no_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:visibility="gone"
+                android:gravity="center"
+          >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/no_data"/>
+                <TextView
+                    android:id="@+id/no_data_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="没有数据哦！"
+                    android:textColor="@color/text_blue"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/confirm_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:background="@drawable/popupwindow_no_task"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="确定"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_blue"/>
+                <TextView
+                    android:id="@+id/select_counts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:textColor="@color/theme_colors"/>
+            </LinearLayout>
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

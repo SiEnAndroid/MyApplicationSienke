@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.thinker_soft">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 获取当前运行的Activity -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 控制灯光权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 设置GPS权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 扫码相关 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 配置文件的读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 上网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- wifi -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- GPS定位信息 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/> -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <!-- 使用导航功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 震动 -->
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".myapplicaction.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Security_check.activity.MoveGuideActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--移动查询-->
+        <activity
+            android:name=".Security_check.activity.QueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.CostListviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.CostDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.BusinessManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.BusinessManageLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.BusinessCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.MoreSettingsActivity"
+            android:screenOrientation="portrait" />
+        <!--安检-->
+        <activity
+            android:name=".Security_check.activity.MobileSecurityLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.SecurityChooseActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.NewTaskActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.NoCheckUserListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.TaskChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.SecurityStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.UserDetailInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.UserListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.UploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.FileManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.IpSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.SystemSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.NewTaskDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.ContinueCheckUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.MyPhotoGalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.SecurityGuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.DataTransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.TaskFileDeleteActivity"
+            android:screenOrientation="portrait" />
+
+        <!--抄表列表-->
+        <activity
+            android:name=".meter_code.sk.ui.MeterUserListsActivity"
+            android:screenOrientation="portrait" />
+            <!--抄表下载-->
+        <activity
+            android:name=".meter_code.sk.ui.MeterReaderDownloadActivity"
+            android:screenOrientation="portrait" />
+        <!--蓝牙配对-->
+        <activity android:name=".meter_code.sk.ui.BluetoothMeteActivity"
+            android:screenOrientation="portrait" />
+        <!--蓝牙打印小票-->
+        <activity android:name=".meter_code.sk.ui.PrintBluetActivity"
+            android:screenOrientation="portrait" />
+        <!--抄表备注修改-->
+        <activity android:name=".meter_code.sk.ui.MeterRemarkActivity"
+            android:screenOrientation="portrait" />
+        <!--抄表员-->
+        <activity android:name=".meter_code.sk.ui.MeterReaderPersonnelActivity"
+            android:screenOrientation="portrait" />
+        <!--安检-->
+        <!--上传模式-->
+        <activity android:name=".meter_code.sk.ui.security.SecurityUpActivity"
+            android:screenOrientation="portrait" />
+        <!--通气安检-->
+        <activity android:name=".meter_code.sk.ui.security.SecurityAerateActivity"
+            android:screenOrientation="portrait" />
+        <!--通气安检详情-->
+        <activity android:name=".meter_code.sk.ui.security.AerateDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!--新增计划-->
+        <activity android:name=".meter_code.sk.ui.security.SecurityAddedActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait" />
+        <!--安检情况-->
+        <activity android:name=".meter_code.sk.ui.security.SecurityAuditActivity"
+            android:screenOrientation="portrait"/>
+        <!--安检情况详情-->
+        <activity android:name=".meter_code.sk.ui.security.SecurityAuditDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--安检图片查看器-->
+        <activity android:name=".meter_code.sk.ui.PhotoGalleryActivity"
+            android:screenOrientation="portrait" />
+        <!--安检异常-->
+        <activity android:name=".meter_code.sk.ui.security.SecurityAbnormalActivity"
+            android:screenOrientation="portrait"/>
+        <!--安检异常详情-->
+        <activity android:name=".meter_code.sk.ui.security.SecurityAbnormalInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".meter_code.sk.ui.SecurityAbnormalPhotoGalleryActivity"
+            android:screenOrientation="portrait"/>
+        <!--异常审核-->
+        <activity android:name=".meter_code.sk.ui.security.SecurityAuditUnqualifiedActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".meter_code.sk.ui.security.AuditUnqualifiedInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".meter_code.sk.ui.AuditUnqualifiedImageActivity"
+            android:screenOrientation="portrait"/>
+        <!--移动报装web-->
+        <activity android:name=".meter_code.sk.ui.LotActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--移动报装流程选择-->
+        <activity android:name=".meter_code.sk.ui.reportadorn.ReportFlowActivity"
+            android:screenOrientation="portrait"
+            />
+        
+        <!--移动报装-->
+        <activity android:name=".meter_code.sk.ui.reportadorn.ReportAdornActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--移动报装详情-->
+        <activity android:name=".meter_code.sk.ui.reportadorn.ReportAdornDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!--文件选择-->
+        <activity android:name=".meter_code.sk.ui.reportadorn.FileSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".meter_code.sk.ui.filepicker.FilePickerActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <!--文件打开方式选择-->
+        <activity
+            android:name=".meter_code.sk.ui.reportadorn.FileOpenActivity"
+            android:theme="@style/DialogStyle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        
+        
+        <!--方根安检用户详情-->
+        <activity android:name=".meter_code.sk.ui.security.SecurityUserDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--=====================东渝安检==========================-->
+        <!--东渝登录-->
+        <activity
+            android:name=".meter_code.sk.ui.securityeast.SyEastLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <!--东渝主界面-->
+        <activity
+            android:name=".meter_code.sk.ui.securityeast.SyEastHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <!--新增-->
+        <activity android:name=".meter_code.sk.ui.securityeast.activity.NewDonYuAcivity"/>
+        <!--审核-->
+        <activity android:name=".meter_code.sk.ui.securityeast.activity.AuditDonYuAcivity"/>
+        <!--审核详情-->
+        <activity android:name=".meter_code.sk.ui.securityeast.activity.AuditDonYuDetailActivity"/>
+        <!--未通过录入-->
+        <activity android:name=".meter_code.sk.ui.securityeast.activity.NotThroughDonYuAcivity"/>
+        <!--安检异常界面-->
+        <activity android:name=".meter_code.sk.ui.securityeast.activity.SecurityExceptionsDonYuAcivity"/>
+        <!--东渝任务列表-->
+        <activity
+            android:name=".meter_code.sk.ui.securityeast.activity.SyEastDownTaskActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+
+        <!--东渝安检录入-->
+        <activity
+            android:name=".meter_code.sk.ui.securityeast.activity.SyEastCheckListDatailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+
+
+        
+
+        <!--掌上办公-->
+        <activity
+            android:name=".mobile_business.BusinessFlowInfoOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessFlowOvertimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessFlowEvectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessFlowWorkerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessFlowDismissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessFlowLeaveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.MobileBusinessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessSentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessNewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessEmailInboxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessNetPhoneBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessCommunityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessPersonSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessWorkReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessCheckingInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessCheckingInInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessSendEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessPopPublishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessColumeMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessFlowInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessEmailInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessAnswerEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessIntransitEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessCheckingIninfoMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessCheckingInListInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.ScheduleListviewInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessSettingGeneralActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessSettingIdInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessSettingNewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessSettingIdinfoPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessSettingIdinfoEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.WorkReportInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.ReportInfoInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessNewsInfoActivity"
+            android:screenOrientation="portrait" />
+        <!--智慧平台-->
+        <activity
+            android:name=".Security_check.activity.MoveLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.MoveHomePageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Security_check.activity.BusinessWebviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mobile_business.BusinessDataInfoActivity"
+            android:screenOrientation="portrait" />
+            <!--图片\apk安装-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.administrator.thinker_soft.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".meter_code.activity.MeterHomePageActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 移动抄表 -->
+        <activity
+            android:name=".meter_code.activity.MeterDataDownloadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterUserNameQueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterUserIDQueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterNumberQueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterBookQueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.TesseractOcrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.zxing.android.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterUserListviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterUserDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterDeleteFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterPageCountSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterPatternActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MapMeterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterUserCoordinateManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterPrintNoteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".meter_code.activity.MeterDataTransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.CustomQueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterUserContinueActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterUserQueryResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterUserUndoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.ObtainMeterCoodinateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterMapDownloadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.LocalCityMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterAllUserListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.BluetoothActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.PrintDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_code.activity.MeterTrackActivity"
+            android:screenOrientation="portrait" />
+        <!-- 版本更新下载 -->
+        <service android:name=".meter_code.sk.update.DownLoadService"/>
+
+        <!-- 百度地图 验证码 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="qeWx9a8xucRxj72AYDeylprGjUB4Xmi5" />
+        <!-- 百度定位SDK  service  BEGIN -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+        <!-- 巡检 -->
+        <activity
+            android:name=".patrol_inspection.activity.PatrolHomePageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".patrol_inspection.activity.PatrolListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".patrol_inspection.activity.AddTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".patrol_inspection.activity.MineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".patrol_inspection.activity.EquipmentPatrolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".patrol_inspection.activity.PatrolEnteringActivity"
+            android:screenOrientation="portrait" />
+        <!-- 抄表缴费 -->
+        <activity
+            android:name=".meter_payment.MeterReadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_payment.ChargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_payment.MeterPaymentActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_payment.ChargeBluetoothActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meter_payment.ChargePrintDataActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Security_check.activity.FeedbackActivity" />
+        <activity android:name=".meter_payment.ModifyDataActivity" />
+        <activity android:name=".meter_code.activity.MeterDownloadModeActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <!--<meta-data-->
+        <!--android:name="com.google.android.gms.version"-->
+        <!--android:value="@integer/google_play_services_version" />-->
+
+        <activity android:name=".meter_code.sk.ui.reportadorn.OpenAnAccountActivity"/>
+
+
+    </application>
+
+</manifest>

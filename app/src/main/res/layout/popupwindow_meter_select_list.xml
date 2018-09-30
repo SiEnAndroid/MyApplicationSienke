@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@mipmap/window_bg"
+        android:paddingTop="4dp"
+        android:scrollbarSize="2dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarThumbVertical="@color/text_blue">
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/home_meter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/meter_settings_first_one_selector"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="首页抄表"
+                android:textColor="@color/text_black"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_thin" />
+
+            <TextView
+                android:id="@+id/continue_meter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/meter_settings_first_one_selector"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="继续抄表"
+                android:textColor="@color/text_black"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_thin" />
+
+            <TextView
+                android:id="@+id/undone_meter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/meter_settings_layout_selector"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="未抄表"
+                android:textColor="@color/text_black"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_thin" />
+
+            <TextView
+                android:id="@+id/have_done_meter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/meter_settings_layout_selector"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="已抄表"
+                android:textColor="@color/text_black"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

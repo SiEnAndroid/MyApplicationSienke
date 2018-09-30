@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:id="@+id/root_linearlayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@mipmap/title_bar_bg">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/back_selector"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="数据上传"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:id="@+id/up_load"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/upload_icon_selector"
+                android:drawablePadding="3dp"
+                android:text="上传"
+                android:textColor="@drawable/normal_text_pressed_selector"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/white_transparent"
+                android:dividerHeight="8dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:listSelector="#00000000"
+                android:scrollbarThumbVertical="@color/text_blue"
+                android:scrollbarStyle="insideInset"
+                android:scrollbarSize="2dp"/>
+            <TextView
+                android:id="@+id/no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/no_data"
+                android:gravity="center_horizontal"
+                android:text="抱歉，本地没有数据上传哦~"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <LinearLayout
+                android:id="@+id/upload_task_select_layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/select_bg_shape"
+                android:layout_margin="5dp"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/select_all"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/radio_button_left_bg_selector"
+                    android:text="全选"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/reverse"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/radio_button_bg_selector"
+                    android:gravity="center"
+                    android:text="反选"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/select_cancel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/radio_button_bg_selector"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
